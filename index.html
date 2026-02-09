@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Gorilla</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            background-color: #000;
+            overflow: hidden; /* Keeps it a single, clean screen */
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            /* 100dvh ensures it fits mobile screens perfectly */
+            height: 100dvh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* 'cover' keeps the aspect ratio, 'top' focuses on his face */
+            object-fit: cover;
+            object-position: center top; 
+            z-index: 1;
+        }
+
+        /* A subtle dark gradient at the bottom for text readability */
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <img src="images.jpg" alt="Gorilla giving the middle finger" class="hero-img">
+        
+
+    </section>
+
+</body>
+</html>
